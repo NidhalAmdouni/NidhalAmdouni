@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500">
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E4FC0"/>
+      <stop offset="1" stop-color="#0A2A7A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE45C"/>
+      <stop offset="1" stop-color="#F7B500"/>
+    </linearGradient>
+    <clipPath id="inner">
+      <path id="shieldInner" d="M600 118 L902 190 V500 C902 700 782 806 600 878 C418 806 298 700 298 500 V190 Z"/>
+    </clipPath>
+    <clipPath id="ballClip"><circle cx="600" cy="610" r="104"/></clipPath>
+    <g id="wing">
+      <polygon points="552,432 270,262 330,392 552,484"/>
+      <polygon points="552,492 290,410 350,510 552,540"/>
+      <polygon points="552,548 330,530 392,606 552,590"/>
+    </g>
+  </defs>
+
+  <!-- Shield: white outer, yellow ring, blue body -->
+  <path d="M600 70 L950 152 V500 C950 724 818 852 600 936 C382 852 250 724 250 500 V152 Z" fill="#FFFFFF" stroke="#0A2A7A" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M600 96 L926 172 V500 C926 710 802 828 600 910 C398 828 274 710 274 500 V172 Z" fill="url(#gold)"/>
+  <use href="#shieldInner" fill="url(#blue)"/>
+
+  <!-- Light rays (النور) behind the ball -->
+  <g clip-path="url(#inner)" opacity="0.22" fill="#FFD21F">
+    <g transform="translate(600 610)">
+      <polygon points="0,0 -26,-520 26,-520"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(30)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(60)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(90)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(120)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(150)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(180)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(210)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(240)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(270)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(300)"/>
+      <polygon points="0,0 -26,-520 26,-520" transform="rotate(330)"/>
+    </g>
+  </g>
+
+  <!-- Eagle wings -->
+  <g fill="#FFD21F" stroke="#0A2A7A" stroke-width="7" stroke-linejoin="round">
+    <use href="#wing"/>
+    <use href="#wing" transform="translate(1200 0) scale(-1 1)"/>
+  </g>
+
+  <!-- Eagle head (geometric) -->
+  <g stroke="#0A2A7A" stroke-width="7" stroke-linejoin="round">
+    <path d="M600 372 L552 436 L580 478 L600 462 L620 478 L648 436 Z" fill="#FFD21F"/>
+    <path d="M572 468 L628 468 L600 530 Z" fill="#FFFFFF"/>
+    <circle cx="578" cy="440" r="7" fill="#0A2A7A" stroke="none"/>
+    <circle cx="622" cy="440" r="7" fill="#0A2A7A" stroke="none"/>
+  </g>
+
+  <!-- Football -->
+  <circle cx="600" cy="610" r="112" fill="#FFD21F"/>
+  <circle cx="600" cy="610" r="104" fill="#FFFFFF"/>
+  <g clip-path="url(#ballClip)" fill="#0A2A7A" stroke="#0A2A7A" stroke-width="4" stroke-linejoin="round">
+    <polygon points="600,574 634,599 621,639 579,639 566,599"/>
+    <polygon points="600,478 640,478 650,520 618,545 600,574 582,545 550,520 560,478" fill="none"/>
+    <path d="M634 599 L688 584 M621 639 L650 690 M579 639 L550 690 M566 599 L512 584 M600 574 L600 506" fill="none"/>
+    <polygon points="600,500 628,496 640,470 560,470 572,496" />
+    <polygon points="698,572 722,600 716,640 690,628 684,590"/>
+    <polygon points="502,572 478,600 484,640 510,628 516,590"/>
+    <polygon points="650,692 676,670 714,690 700,730 660,730"/>
+    <polygon points="550,692 524,670 486,690 500,730 540,730"/>
+    <polygon points="574,700 626,700 636,740 564,740"/>
+  </g>
+  <circle cx="600" cy="610" r="104" fill="none" stroke="#0A2A7A" stroke-width="6"/>
+
+  <!-- Acronym ribbon -->
+  <path d="M368 238 H832 L808 300 H392 Z" fill="#FFFFFF" stroke="#0A2A7A" stroke-width="7" stroke-linejoin="round"/>
+  <text x="600" y="284" text-anchor="middle" font-family="Montserrat, 'Arial Black', 'DejaVu Sans', sans-serif" font-weight="900" font-size="52" letter-spacing="6" fill="#0A2A7A">E.S.O.Z</text>
+
+  <!-- Name -->
+  <g font-family="Cairo, Tajawal, Almarai, 'DejaVu Sans', sans-serif" font-weight="900" text-anchor="middle">
+    <g>
+      <line x1="150" y1="1030" x2="400" y2="1030" stroke="#FFD21F" stroke-width="10" stroke-linecap="round"/>
+      <line x1="800" y1="1030" x2="1050" y2="1030" stroke="#FFD21F" stroke-width="10" stroke-linecap="round"/>
+      <text x="600" y="1056" font-size="86" fill="#0A2A7A">جمعية</text>
+    </g>
+    <text x="600" y="1190" font-size="160" fill="#0A2A7A" stroke="#0A2A7A" stroke-width="22" stroke-linejoin="round">النور الرياضي</text>
+    <text x="600" y="1190" font-size="160" fill="#FFD21F">النور الرياضي</text>
+    <text x="600" y="1296" font-size="74" fill="#1E4FC0">بوادي الزرقاء</text>
+  </g>
+
+  <!-- Tagline -->
+  <g font-family="Cairo, Tajawal, Almarai, 'DejaVu Sans', sans-serif" font-weight="700" text-anchor="middle">
+    <rect x="300" y="1346" width="600" height="8" rx="4" fill="#FFD21F"/>
+    <text x="600" y="1420" font-size="46" fill="#0A2A7A">رياضة تجمعنا · معاً من أجل مستقبل أفضل</text>
+  </g>
+</svg>
